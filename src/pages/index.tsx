@@ -60,7 +60,9 @@ export default function Home() {
     </header>
 
     <main className="w-[1110px] m-auto flex justify-end">
-      <div className="w-[770px] pt-16 px-10">
+      <div className="w-[770px] pt-16 px-10 flex flex-col gap-44">
+
+        {/* INTRODUÇÂO */}
         <section className="flex flex-col gap-10">
 
             <div className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
@@ -111,6 +113,121 @@ export default function Home() {
                   <span className='text-md font-thin text-white'>Tecnologias</span>
                 </div>
             </div>
+
+
+        </section>
+
+        {/* SOBRE */}
+        <section className="flex flex-col gap-10">
+
+          <div className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
+            
+            <AiOutlineHome size={15}/>
+            <span>
+              SOBRE
+            </span>
+          </div>
+
+          <h1 className="flex gap-1 text-white text-5xl ">
+            <span>Um pouco sobre o </span>
+            <span className="text-[#319791]">que faço</span>
+          </h1>
+
+
+          <div className='text-gray-400 text-md '>
+            <p  className="w-[500px]">
+              Apaixonado por criar soluções poderosas que transformam dados em resultados. 
+              Com experiência em diversas tecnologias e linguagens de programação, estou 
+              sempre em busca de novos desafios que me permitam expandir minhas habilidades 
+              e conhecimentos.
+            </p>
+
+            <ul className='pl-5 py-5 '>
+              <li className=' list-disc'>Desenvolvimento de aplicativos web completos, desde a concepção até a implantação.</li>
+              <li className=' list-disc'>Criação de interfaces de usuário atraentes e intuitivas usando frameworks e bibliotecas front-end, como React.</li>
+              <li className=' list-disc'>Integração de bancos de dados relacionais e não relacionais para armazenamento e recuperação de dados.</li>
+              <li className=' list-disc'>Implementação de recursos de autenticação e autorização para garantir a segurança dos aplicativos.</li>
+              <li className=' list-disc'>Otimização de desempenho e escalabilidade dos aplicativos para lidar com altas cargas de tráfego.</li>
+              <li className=' list-disc'>Colaboração em equipes de desenvolvimento ágil, utilizando práticas modernas de desenvolvimento de software.</li>
+            </ul>
+
+            <p>
+              Ao explorar meu portfólio, você encontrará links para os condigos fontes, bem estruturados e de fácil manutenção. 
+              Além disso, demonstro habilidades de resolução de problemas, capacidade de aprendizado rápido e uma mentalidade focada 
+              em oferecer a melhor experiência para o usuário final. Se você estiver interessado em trabalhar comigo ou tiver alguma 
+              pergunta, não hesite em entrar em contato. Estou ansioso para discutir projetos futuros e oportunidades de colaboração.
+            </p>
+
+          </div>
+
+        </section>
+
+         {/* SOBRE */}
+        <section className="flex flex-col gap-10">
+
+          <div className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
+            
+            <AiOutlineHome size={15}/>
+            <span>
+              EXPERIÊNCIAS
+            </span>
+          </div>
+
+          <h1 className="flex gap-3 text-white text-5xl ">
+            <span>FORMAÇÕES &</span>
+            <span className="text-[#319791]">EXPERIÊNCIAS</span>
+          </h1>
+
+
+          <div className='flex flex-col'>
+
+            <div className='border-l border-l-gray-500 relative ml-3 pb-10'> 
+              <span className='w-5 h-5 bg-primary rounded-full absolute -left-[11px] top-0'></span>
+
+              <div className='flex flex-col px-10 space-y-4'>
+                <span className='text-md text-primary'>2022 - Presente</span>
+
+                <div className='flex flex-col gap-1'>
+                  <span className='text-2xl text-white'>Analise e Desenvolvimento de Sistemas</span>
+                  <span className='text-sm text-gray-400'>Faculdade Anhanguera</span>
+                </div>
+
+                <div className='flex flex-col gap-1'>
+                  <span className='text-2xl text-white'>Python 3( PySide6, Django, Selenium, Regexp, Testes, TDD, POO, Design Patterns GoF)</span>
+                  <span className='text-sm text-gray-400'>Udemy</span>
+                </div>
+
+                <div className='flex flex-col gap-1'>
+                  <span className='text-2xl text-white'>Assistente de TI</span>
+                  <span className='text-sm text-gray-400'>Formedica Farmacia de Manipulação</span>
+                </div>
+                
+              </div>
+
+            </div>
+
+            
+            <div className='border-l border-l-gray-500 relative ml-3'> 
+              <span className='w-5 h-5 bg-primary rounded-full absolute -left-[11px] top-0'></span>
+
+              <div className='flex flex-col px-10 space-y-4'>
+                <span className='text-md text-primary'>2019 - 2022</span>
+
+                <div className='flex flex-col gap-1'>
+                  <span className='text-2xl text-white'>Monitor de Operações</span>
+                  <span className='text-sm text-gray-400'>Spacecom Monitoramento</span>
+                </div>
+
+              </div>
+
+            </div>
+
+          </div>
+
+
+
+
+
 
 
         </section>
