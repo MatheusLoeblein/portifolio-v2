@@ -1,5 +1,9 @@
-import { AiFillGithub, AiFillLinkedin, AiFillInstagram, AiOutlineHome } from 'react-icons/ai'
+import { AiFillGithub, AiFillLinkedin, AiFillInstagram, AiOutlineHome, AiFillHtml5 } from 'react-icons/ai'
 import { VscArrowDown } from 'react-icons/vsc'
+import { SiNginx } from 'react-icons/si'
+import { BsGit } from 'react-icons/bs'
+import { FaNode } from 'react-icons/fa'
+import { BiLogoCss3, BiLogoDjango, BiLogoFigma, BiLogoJavascript, BiLogoPostgresql, BiLogoPython, BiLogoReact, BiLogoTailwindCss } from 'react-icons/bi'
 
 export default function Home() {
   return (
@@ -128,9 +132,9 @@ export default function Home() {
             </span>
           </div>
 
-          <h1 className="flex gap-1 text-white text-5xl ">
-            <span>Um pouco sobre o </span>
-            <span className="text-[#319791]">que faço</span>
+          <h1 className="flex gap-[12px] text-white text-5xl ">
+            <span>UM POUCO SOBRE O</span>
+            <span className="text-[#319791]">QUE FAÇO</span>
           </h1>
 
 
@@ -163,28 +167,29 @@ export default function Home() {
         </section>
 
          {/* SOBRE */}
+
         <section className="flex flex-col gap-10">
 
           <div className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
             
             <AiOutlineHome size={15}/>
             <span>
-              EXPERIÊNCIAS
+            EXPERIÊNCIAS
             </span>
           </div>
 
           <h1 className="flex gap-3 text-white text-5xl ">
             <span>FORMAÇÕES &</span>
-            <span className="text-[#319791]">EXPERIÊNCIAS</span>
+            <span className="text-[#319791]">EXPERIENCIAS</span>
           </h1>
 
 
           <div className='flex flex-col'>
 
             <div className='border-l border-l-gray-500 relative ml-3 pb-10'> 
-              <span className='w-5 h-5 bg-primary rounded-full absolute -left-[11px] top-0'></span>
+              <span className='w-3 h-3 bg-primary rounded-full absolute -left-[7px] top-0'></span>
 
-              <div className='flex flex-col px-10 space-y-4'>
+              <div className='flex flex-col px-10 space-y-10 -mt-1'>
                 <span className='text-md text-primary'>2022 - Presente</span>
 
                 <div className='flex flex-col gap-1'>
@@ -208,9 +213,9 @@ export default function Home() {
 
             
             <div className='border-l border-l-gray-500 relative ml-3'> 
-              <span className='w-5 h-5 bg-primary rounded-full absolute -left-[11px] top-0'></span>
+            <span className='w-3 h-3 bg-primary rounded-full absolute -left-[7px] top-0'></span>
 
-              <div className='flex flex-col px-10 space-y-4'>
+              <div className='flex flex-col px-10 space-y-10 -mt-1'>
                 <span className='text-md text-primary'>2019 - 2022</span>
 
                 <div className='flex flex-col gap-1'>
@@ -224,11 +229,123 @@ export default function Home() {
 
           </div>
 
+        </section>
+
+        <section className="flex flex-col gap-10">
+
+          <div className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
+            
+            <AiOutlineHome size={15}/>
+            <span>
+              SERVIÇOS
+            </span>
+          </div>
+
+          <h1 className="flex gap-3 text-white text-5xl ">
+            <span>MEUS</span>
+            <span className="text-[#319791]">SERVIÇOS</span>
+          </h1>
+
+
+          <div className='flex flex-col gap-12'>
+
+            <div className='p-7 flex flex-col gap-3 border border-gray-500 rounded-xl text-md text-gray-400'>
+              <h2 className='text-3xl text-[#319791]'>Back-End</h2>
+              <p>
+                Como desenvolvedor de back end, eu construo a espinha dorsal dos sistemas, 
+                potencializada por APIs sólidas. Isso significa gerenciar dados, garantir 
+                segurança, otimizar desempenho e criar integrações poderosas.
+              </p>
+            </div>
+
+            <div className='p-7 flex flex-col gap-3 border border-gray-500 rounded-xl text-md text-gray-400'>
+              <h2 className='text-3xl text-[#319791]'>Front-End</h2>
+              <p>
+                No front end, aproveito essas APIs para criar experiências envolventes para os usuários. 
+                Isso significa interfaces intuitivas e dinâmicas, alimentadas por dados de back end por 
+                meio de APIs bem projetadas.
+              </p>
+            </div>
 
 
 
+          </div>
+
+            
+
+        </section>
 
 
+        <section className="flex flex-col gap-x-3 gap-y-10">
+
+          <div className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
+            
+            <AiOutlineHome size={15}/>
+            <span>
+              TECNOLOGIAS
+            </span>
+          </div>
+
+          <h1 className="flex gap-3 text-white text-5xl ">
+            <span>PRINCIPAIS</span>
+            <span className="text-[#319791]">TECNOLOGIAS</span>
+          </h1>
+
+
+          <div className='grid grid-cols-4 gap-12 text-white'>
+
+            <div className='flex flex-col items-center'>
+              <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+                <BiLogoPython size={75}/>
+              </div>
+              <span>Python</span>
+            </div>
+
+            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+              <BiLogoJavascript  size={75}/>
+            </div>
+
+            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+              <BiLogoDjango  size={75}/>
+            </div>
+
+            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+              <BiLogoReact  size={75}/>
+            </div>
+
+            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+              <SiNginx  size={75}/>
+            </div>
+
+            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+              <FaNode  size={75}/>
+            </div>
+
+            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+              <BiLogoTailwindCss  size={75}/>
+            </div>
+
+            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+              <BsGit  size={75}/>
+            </div>
+
+            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+              <BiLogoPostgresql  size={75}/>
+            </div>
+
+            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+              <AiFillHtml5  size={75}/>
+            </div>
+
+            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+              <BiLogoCss3  size={75}/>
+            </div>
+
+            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+              <BiLogoFigma  size={75}/>
+            </div>
+
+          </div>
 
         </section>
       </div>
