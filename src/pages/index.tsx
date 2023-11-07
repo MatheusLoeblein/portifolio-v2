@@ -4,6 +4,7 @@ import { SiNginx } from 'react-icons/si'
 import { BsGit } from 'react-icons/bs'
 import { FaNode } from 'react-icons/fa'
 import { BiLogoCss3, BiLogoDjango, BiLogoFigma, BiLogoJavascript, BiLogoPostgresql, BiLogoPython, BiLogoReact, BiLogoTailwindCss } from 'react-icons/bi'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -166,7 +167,7 @@ export default function Home() {
 
         </section>
 
-         {/* SOBRE */}
+         {/* EXPERIÊNCIAS */}
 
         <section className="flex flex-col gap-10">
 
@@ -231,6 +232,8 @@ export default function Home() {
 
         </section>
 
+        {/* SERVIÇOS */}
+
         <section className="flex flex-col gap-10">
 
           <div className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
@@ -267,16 +270,13 @@ export default function Home() {
               </p>
             </div>
 
-
-
           </div>
-
-            
 
         </section>
 
+        {/* TECNOLOGIAS */}
 
-        <section className="flex flex-col gap-x-3 gap-y-10">
+        <section className="flex flex-col gap-y-10 ">
 
           <div className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
             
@@ -294,58 +294,122 @@ export default function Home() {
 
           <div className='grid grid-cols-4 gap-12 text-white'>
 
-            <div className='flex flex-col items-center'>
-              <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+            <div className='flex flex-col gap-4 items-center font-medium text-sm'>
+              <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
                 <BiLogoPython size={75}/>
               </div>
               <span>Python</span>
             </div>
 
-            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+          <div className='flex flex-col items-center font-medium text-sm gap-4'>   
+            <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
               <BiLogoJavascript  size={75}/>
             </div>
+              <span>Javascript</span>
+            </div>
 
-            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+          <div className='flex flex-col items-center font-medium text-sm gap-4'>  
+            <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
               <BiLogoDjango  size={75}/>
             </div>
+              <span>Django</span>
+            </div>
 
-            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+          <div className='flex flex-col items-center font-medium text-sm gap-4'>  
+            <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
               <BiLogoReact  size={75}/>
             </div>
+              <span>React</span>
+            </div>
 
-            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+          <div className='flex flex-col items-center font-medium text-sm gap-4'>  
+            <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
               <SiNginx  size={75}/>
             </div>
+              <span>Nginx</span>
+            </div>
 
-            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+          <div className='flex flex-col items-center font-medium text-sm gap-4'>  
+            <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
               <FaNode  size={75}/>
             </div>
+              <span>NodeJs</span>
+            </div>
 
-            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+          <div className='flex flex-col items-center font-medium text-sm gap-4'>  
+            <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
               <BiLogoTailwindCss  size={75}/>
             </div>
+              <span>Tailwind</span>
+            </div>
 
-            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+          <div className='flex flex-col items-center font-medium text-sm gap-4'>  
+            <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
               <BsGit  size={75}/>
             </div>
+              <span>Git</span>
+            </div>
 
-            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+          <div className='flex flex-col items-center font-medium text-sm gap-4'>  
+            <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
               <BiLogoPostgresql  size={75}/>
             </div>
+              <span>Postgre</span>
+            </div>
 
-            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+          <div className='flex flex-col items-center font-medium text-sm gap-4'>  
+            <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
               <AiFillHtml5  size={75}/>
             </div>
-
-            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
-              <BiLogoCss3  size={75}/>
+              <span>Html</span>
             </div>
 
-            <div className='border border-gray-500 rounded-[3rem] h-44 w-32 flex items-center justify-center'>
+          <div className='flex flex-col items-center font-medium text-sm gap-4'>  
+            <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
+              <BiLogoCss3  size={75}/>
+            </div>
+              <span>Css</span>
+            </div>
+
+          <div className='flex flex-col items-center font-medium text-sm gap-4'>  
+            <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
               <BiLogoFigma  size={75}/>
+            </div>
+              <span>Figma</span>
             </div>
 
           </div>
+
+        </section>
+
+        
+        {/* TECNOLOGIAS */}
+
+        <section className="flex flex-col gap-y-10 ">
+
+          <div className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
+            
+            <AiOutlineHome size={15}/>
+            <span>
+              PORTIFOLIO
+            </span>
+          </div>
+
+          <h1 className="flex gap-3 text-white text-5xl ">
+            <span>PROJETOS </span>
+            <span className="text-[#319791]">EM DESTAQUE</span>
+          </h1>
+
+          <div className='text-white'>
+            <div className='-ml-1 overflow-hidden rounded-lg'>
+              <Image src='assets/simposio/Group 1.svg' alt='teste' width={2000} height={2000} className='object-cover hover:scale-110 hover:rotate-2 transition-all duration-500 cursor-pointer'/>
+            </div>
+
+           <h3 className='text-2xl'>LANDING PAGE - SIMPOSIO OBESIDADE MULTIFATORIAL</h3>
+
+          </div>
+
+    
 
         </section>
       </div>
