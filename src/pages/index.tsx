@@ -1,12 +1,16 @@
 "use client"
 
-import { AiFillGithub, AiFillLinkedin, AiFillInstagram, AiOutlineHome, AiFillHtml5 } from 'react-icons/ai'
+import { AiFillGithub, AiFillLinkedin, AiFillInstagram, AiOutlineHome, AiFillHtml5, AiOutlineUser } from 'react-icons/ai'
+import { PiSuitcaseSimpleBold } from 'react-icons/pi'
 import { VscArrowDown } from 'react-icons/vsc'
 import { SiNginx } from 'react-icons/si'
-import { BsGit } from 'react-icons/bs'
+import { GrTechnology } from 'react-icons/gr'
+import { BsGit, BsColumnsGap,  BsBoxes } from 'react-icons/bs'
+import { BiServer } from 'react-icons/bi'
 import { FaNode } from 'react-icons/fa'
 import { BiLogoCss3, BiLogoDjango, BiLogoFigma, BiLogoJavascript, BiLogoPostgresql, BiLogoPython, BiLogoReact, BiLogoTailwindCss } from 'react-icons/bi'
 import Image from 'next/image'
+import Link from 'next/link'
 
 import { useScrollDown } from '@/hooks/useScrollDown'
 
@@ -17,20 +21,67 @@ export default function Home() {
 
   const scrollDown = useScrollDown();
 
+  const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
+    // first prevent the default behavior
+    e.preventDefault();
+    // get the href and remove everything before the hash (#)
+    const href = e.currentTarget.href;
+    const targetId = href.replace(/.*\#/, "");
+    // get the element by id and use scrollIntoView
+    const elem = document.getElementById(targetId);
+    elem?.scrollIntoView({
+      behavior: "smooth",
+    });
+    };
+
   return (
     <>
+
     <video autoPlay loop muted className='w-full h-full fixed object-cover bg-black -z-10'>
         <source src="assets/video1.mp4" type="video/mp4" />
         Seu navegador não suporta a reprodução de vídeos.
       </video>
       <div className='fixed top-0 bottom-0 right-0 left-0 bg-[#00000091] z-[-1]'>
     </div>
-    <motion.header 
-    initial={{opacity: 0, y:'-45%'}}
-    whileInView={{opacity: 1, y:'-50%'}}
-    transition={{type: 'tween'}}
-    className="fixed flex top-1/2 -translate-y-1/2 left-0 border border-gray-500 rounded-2xl p-10 ml-[20px] w-[400px] text-white">
-      <div className="flex flex-col items-center justify-center w-full gap-8">
+
+
+    <main className='w-[900px] flex flex-col justify-center m-auto items-center'>
+      
+
+    <motion.nav 
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    className='hidden xl:flex fixed right-10 text-gray-300 text-lg border border-gray-500 py-9 px-4 flex-col gap-8 top-1/2 -translate-y-1/2 rounded-full'>
+      <div>
+        <a href="" className='hover:text-[#319791] transition-colors'><AiOutlineHome/></a>
+      </div>
+
+      <div>
+        <Link href="#sobre" className='hover:text-[#319791] transition-colors' onClick={handleScroll}><AiOutlineUser/></Link>
+      </div>
+      <div>
+        <a href="" className='hover:text-[#319791] transition-colors'><PiSuitcaseSimpleBold/></a>
+      </div>
+
+      <div>
+        <a href="" className='hover:text-[#319791] transition-colors'><BsColumnsGap/></a>
+      </div>
+      <div>
+        <a href="" className='hover:text-[#319791] transition-colors'><BiServer /></a>
+      </div>
+      <div>
+        <a href="" className='hover:text-[#319791] transition-colors'><BsBoxes /></a>
+      </div>
+
+    </motion.nav>
+
+    {/* PROFILE */}
+    <motion.div 
+    initial={{opacity: 0}}
+    animate={{opacity: 1}}
+    className="w-full flex border max-w-[775px] border-gray-500 rounded-2xl p-10 text-white mt-5 xl:mt-0 xl:ml-[20px] xl:w-[400px] xl:fixed xl:top-1/2 xl:-translate-y-1/2 xl:left-0" >
+
+      <div className="flex flex-col items-center justify-center w-full gap-5 xl:gap-10">
         <div className="flex justify-between w-full items-center">
           <div className="flex gap-2 text-sm">
             <img 
@@ -46,7 +97,7 @@ export default function Home() {
         </div>
 
         <img 
-            className="rounded-2xl"
+            className="rounded-2xl w-96"
             src="/assets/profile2.png" 
             alt="profileimg" />
 
@@ -76,10 +127,10 @@ export default function Home() {
             CONTATE-ME
         </button>
       </div>
-    </motion.header>
+    </motion.div>
 
-    <main className="w-[1110px] m-auto flex justify-end">
-      <div className="w-[770px] pt-16 px-10 flex flex-col gap-44"
+    <div className="flex justify-center xl:w-[1000px] m-auto xl:justify-end ">
+      <div className="md:w-full overflow-hidden xl:w-[820px] pt-16 px-16 flex flex-col gap-44"
       >
 
         {/* INTRODUÇÂO */}
@@ -103,7 +154,7 @@ export default function Home() {
               initial={{opacity: 0, y: 50}}
               whileInView={{opacity: 1, y: 0}}
               transition={{duration: .7}}
-            className="flex flex-col text-white text-6xl ">
+              className="flex flex-col text-white text-6xl ">
               <span>OLÁ, ME CHAMO</span>
               <span className="text-[#319791]">MATHEUS LOEBLEIN,</span>
               <span>DESENVOLVEDOR <br /> FULL-STACK</span>
@@ -114,7 +165,7 @@ export default function Home() {
               initial={{opacity: 0, y: 70}}
               whileInView={{opacity: 1, y: 0}}
               transition={{duration: 1}}
-            className="text-gray-400 text-md w-[500px]">
+              className="text-gray-400 text-md w-[500px]">
             Apaixonado por criar soluções poderosas que transformam dados em resultados. 
             Com experiência em diversas tecnologias e linguagens de programação, estou 
             sempre em busca de novos desafios que me permitam expandir minhas habilidades 
@@ -126,7 +177,7 @@ export default function Home() {
               initial={{opacity: 0, y: 90}}
               whileInView={{opacity: 1, y: 0}}
               transition={{duration: 1.2}}
-            >
+              >
 
               <div className='flex relative rounded-full border border-gray-500 w-48 h-48 p-2 cursor-pointer'>
 
@@ -154,7 +205,7 @@ export default function Home() {
                   initial={{opacity: 0, x: 50}}
                   whileInView={{opacity: 1, x: 0}}
                   transition={{duration: .4, duration: 1.2}}
-                className='flex flex-col gap-2'>
+                  className='flex flex-col gap-2'>
                   <span className='text-6xl font-medium text-primary'>10+</span>
                   <span className='text-md font-thin text-white'>Tecnologias</span>
                 </motion.div>
@@ -165,7 +216,7 @@ export default function Home() {
 
         {/* SOBRE */}
         <motion.section 
-        className="flex flex-col gap-10">
+        className="flex flex-col gap-10" id='sobre'>
 
           <motion.div 
           initial={{ opacity: 0, y: 40 }}
@@ -471,7 +522,7 @@ export default function Home() {
             initial={{ opacity: 0, y: 70}}
             whileInView={{ opacity: 1, y: 0 }}
             transition={{ duration: 1 }}
-          className='flex flex-col items-center font-medium text-sm gap-4'>  
+            className='flex flex-col items-center font-medium text-sm gap-4'>  
             <div className='border-2 border-gray-500 rounded-[5rem] h-52 w-36 flex items-center justify-center hover:border-[#319791] transition-colors'>
               <BiLogoCss3  size={75}/>
             </div>
@@ -579,7 +630,7 @@ export default function Home() {
             initial={{ opacity: 0}}
             whileInView={{opacity: 1}}
             transition={{ duration: 1.2 }}
-           className='text-2xl mt-5'>LANDING PAGE - SIMPOSIO OBESIDADE MULTIFATORIAL</motion.h3>
+            className='text-2xl mt-5'>LANDING PAGE - SIMPOSIO OBESIDADE MULTIFATORIAL</motion.h3>
 
           </motion.div>
 
@@ -596,7 +647,7 @@ export default function Home() {
             initial={{ opacity: 0}}
             whileInView={{opacity: 1}}
             transition={{ duration: 1.2 }}
-           className='text-2xl mt-5'>LANDING PAGE - SIMPOSIO OBESIDADE MULTIFATORIAL</motion.h3>
+            className='text-2xl mt-5'>LANDING PAGE - SIMPOSIO OBESIDADE MULTIFATORIAL</motion.h3>
 
           </motion.div>
 
@@ -604,7 +655,8 @@ export default function Home() {
 
         </section>
       </div>
-    </main>
+    </div>
+  </main>
   </>
 
   )
