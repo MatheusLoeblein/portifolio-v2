@@ -10,16 +10,48 @@ import { BiServer } from 'react-icons/bi'
 import { FaNode } from 'react-icons/fa'
 import { BiLogoCss3, BiLogoDjango, BiLogoFigma, BiLogoJavascript, BiLogoPostgresql, BiLogoPython, BiLogoReact, BiLogoTailwindCss } from 'react-icons/bi'
 import Image from 'next/image'
-import Link from 'next/link'
 
 import { useScrollDown } from '@/hooks/useScrollDown'
 
 import { motion } from 'framer-motion'
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 
 export default function Home() {
+  const sectionHome = useRef<HTMLElement>();
+  const sectionSobre = useRef<HTMLElement>();
+  const sectionExperiencias = useRef<HTMLElement>();
+  const sectionServicos = useRef<HTMLElement>();
+  const sectionTecnologias = useRef<HTMLElement>();
+  const sectionPortifolio = useRef<HTMLElement>();
+  const [currentSectionId, setCurrentSectionId] = useState(null);
 
-  const scrollDown = useScrollDown();
+  // const scrollDown = useScrollDown();
+
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            // Quando a seção está na viewport, atualize o estado com o ID da seção
+            setCurrentSectionId(entry.target.id);
+          }
+        });
+      },
+      {
+        threshold: 0.5,
+      }
+    );
+    
+    observer.observe(sectionHome.current);
+    observer.observe(sectionSobre.current);
+    observer.observe(sectionExperiencias.current);
+    observer.observe(sectionServicos.current);
+    observer.observe(sectionTecnologias.current);
+    observer.observe(sectionPortifolio.current);
+
+  }, []);
+
 
   const handleScroll = (e: React.MouseEvent<HTMLAnchorElement, MouseEvent>) => {
     // first prevent the default behavior
@@ -31,6 +63,8 @@ export default function Home() {
     const elem = document.getElementById(targetId);
     elem?.scrollIntoView({
       behavior: "smooth",
+      block: "start",
+      inline: "nearest",
     });
     };
 
@@ -51,26 +85,26 @@ export default function Home() {
     <motion.nav 
     initial={{opacity: 0}}
     animate={{opacity: 1}}
-    className='hidden xl:flex fixed right-10 text-gray-300 text-lg border border-gray-500 py-9 px-4 flex-col gap-8 top-1/2 -translate-y-1/2 rounded-full'>
+    className='hidden xl:flex fixed right-10 text-gray-300 text-xl border border-gray-500 py-9 px-4 flex-col gap-8 top-1/2 -translate-y-1/2 rounded-full'>
       <div>
-        <a href="" className='hover:text-[#319791] transition-colors'><AiOutlineHome/></a>
+        <a href="#introducao" className={`hover:text-[#319791] transition-colors ${currentSectionId === "introducao" && 'text-[#319791]'}`} onClick={handleScroll}><AiOutlineHome/></a>
       </div>
 
       <div>
-        <Link href="#sobre" className='hover:text-[#319791] transition-colors' onClick={handleScroll}><AiOutlineUser/></Link>
+        <a href="#sobre" className={`hover:text-[#319791] transition-colors ${currentSectionId === "sobre" && 'text-[#319791]'}`} onClick={handleScroll}><AiOutlineUser/></a>
       </div>
       <div>
-        <a href="" className='hover:text-[#319791] transition-colors'><PiSuitcaseSimpleBold/></a>
+        <a href="#experiencias" className={`hover:text-[#319791] transition-colors ${currentSectionId === "experiencias" && 'text-[#319791]'}`} onClick={handleScroll}><BsColumnsGap/></a>
       </div>
 
       <div>
-        <a href="" className='hover:text-[#319791] transition-colors'><BsColumnsGap/></a>
+        <a href="#servicos" className={`hover:text-[#319791] transition-colors ${currentSectionId === "servicos" && 'text-[#319791]'}`} onClick={handleScroll}><PiSuitcaseSimpleBold/></a>
       </div>
       <div>
-        <a href="" className='hover:text-[#319791] transition-colors'><BiServer /></a>
+        <a href="#tecnologias" className={`hover:text-[#319791] transition-colors ${currentSectionId === "tecnologias" && 'text-[#319791]'}`} onClick={handleScroll}><BiServer /></a>
       </div>
       <div>
-        <a href="" className='hover:text-[#319791] transition-colors'><BsBoxes /></a>
+        <a href="#portifolio" className={`hover:text-[#319791] transition-colors ${currentSectionId === "portifolio" && 'text-[#319791]'}`} onClick={handleScroll}><BsBoxes /></a>
       </div>
 
     </motion.nav>
@@ -130,12 +164,11 @@ export default function Home() {
     </motion.div>
 
     <div className="flex justify-center xl:w-[1000px] m-auto xl:justify-end ">
-      <div className="md:w-full overflow-hidden xl:w-[820px] pt-16 px-16 flex flex-col gap-44"
+      <div className="md:w-full overflow-hidden xl:w-[820px] px-16 flex flex-col"
       >
 
         {/* INTRODUÇÂO */}
-        <motion.section 
-        className="flex flex-col gap-10"
+        <motion.section ref={sectionHome}  className="flex flex-col gap-10 min-min-h-screen py-20" id='introducao'
         >
 
             <motion.div 
@@ -179,7 +212,10 @@ export default function Home() {
               transition={{duration: 1.2}}
               >
 
-              <div className='flex relative rounded-full border border-gray-500 w-48 h-48 p-2 cursor-pointer'>
+              <a 
+              href='#portifolio'
+              onClick={handleScroll}
+              className='flex relative rounded-full border border-gray-500 w-48 h-48 p-2 cursor-pointer'>
 
                 <img src="assets/meus_projetos.svg" className='animate-spin-low ' alt="" />  
 
@@ -187,7 +223,7 @@ export default function Home() {
                  <VscArrowDown size={40}/>
                 </span>
 
-              </div>
+              </a>
 
             </motion.div>
 
@@ -215,8 +251,7 @@ export default function Home() {
         </motion.section>
 
         {/* SOBRE */}
-        <motion.section 
-        className="flex flex-col gap-10" id='sobre'>
+        <motion.section ref={sectionSobre} className="flex flex-col gap-10 min-h-screen py-20" id='sobre'>
 
           <motion.div 
           initial={{ opacity: 0, y: 40 }}
@@ -224,7 +259,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
             
-            <AiOutlineHome size={15}
+            <AiOutlineUser size={15}
             />
             <span>
               SOBRE
@@ -283,7 +318,7 @@ export default function Home() {
 
          {/* EXPERIÊNCIAS */}
 
-        <section className="flex flex-col gap-10">
+        <section  ref={sectionExperiencias} className="flex flex-col gap-10 min-h-screen py-20" id='experiencias'>
 
           <motion.div 
           initial={{ opacity: 0, y: 40 }}
@@ -291,7 +326,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
             
-            <AiOutlineHome size={15}/>
+            <BsColumnsGap size={15}/>
             <span>
             EXPERIÊNCIAS
             </span>
@@ -365,9 +400,7 @@ export default function Home() {
 
         {/* SERVIÇOS */}
 
-        <motion.section 
-        className="flex flex-col gap-10"
-        >
+        <motion.section ref={sectionServicos} className="flex flex-col gap-10 min-h-screen py-20" id='servicos'>
 
           <motion.div 
           initial={{ opacity: 0, y: 40}}
@@ -375,7 +408,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
             
-            <AiOutlineHome size={15}/>
+            <PiSuitcaseSimpleBold size={15}/>
             <span>
               SERVIÇOS
             </span>
@@ -425,7 +458,7 @@ export default function Home() {
 
         {/* TECNOLOGIAS */}
 
-        <section className="flex flex-col gap-y-10 ">
+        <section ref={sectionTecnologias} className="flex flex-col gap-10 min-h-screen file:py-20" id='tecnologias'>
 
           <motion.div 
           initial={{ opacity: 0, y: 30 }}
@@ -434,7 +467,7 @@ export default function Home() {
           
           className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
             
-            <AiOutlineHome size={15}/>
+            <BiServer size={15}/>
             <span>
               TECNOLOGIAS
             </span>
@@ -592,9 +625,9 @@ export default function Home() {
         </section>
 
         
-        {/* TECNOLOGIAS */}
+        {/* Portifolio */}
 
-        <section className="flex flex-col gap-y-10 ">
+        <section ref={sectionPortifolio} className="flex flex-col gap-10 min-h-screen py-20" id='portifolio'>
 
           <motion.div 
           initial={{ opacity: 0, y: 30}}
@@ -602,7 +635,7 @@ export default function Home() {
           transition={{ duration: 0.5 }}
           className='flex gap-3 w-max text-xs text-white py-2 px-5 rounded-full border border-gray-500'>
             
-            <AiOutlineHome size={15}/>
+            <BsBoxes size={15}/>
             <span>
               PORTIFOLIO
             </span>
