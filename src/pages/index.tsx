@@ -27,7 +27,6 @@ export default function Home() {
 
   // const scrollDown = useScrollDown();
 
-
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
@@ -145,14 +144,14 @@ export default function Home() {
         </div>
 
         <div className="flex gap-4 text-gray-400">
-          <span className="flex justify-center items-center w-12 h-12 rounded-full p-1 border border-gray-300 hover:text-[#319791] hover:border-[#319791] cursor-pointer transition-colors duration-300">
+          <span className="flex justify-center items-center w-12 h-12 rounded-full p-1 border-2 border-gray-500 hover:text-[#319791] hover:border-[#319791] cursor-pointer transition-colors duration-300">
             <AiFillGithub size={20}/>
           </span>
           <span
-          className="flex justify-center items-center w-12 h-12 rounded-full p-1 border border-gray-300 hover:text-[#319791] hover:border-[#319791] cursor-pointer transition-colors duration-300">
+          className="flex justify-center items-center w-12 h-12 rounded-full p-1 border-2 border-gray-500 hover:text-[#319791] hover:border-[#319791] cursor-pointer transition-colors duration-300">
             <AiFillLinkedin size={20}/>
           </span>
-          <span className="flex justify-center items-center w-12 h-12 rounded-full p-1 border border-gray-300 hover:text-[#319791] hover:border-[#319791] cursor-pointer transition-colors duration-300">
+          <span className="flex justify-center items-center w-12 h-12 rounded-full p-1 border-2 border-gray-500 hover:text-[#319791] hover:border-[#319791] cursor-pointer transition-colors duration-300">
             <AiFillInstagram size={20}/>
           </span>
         </div>
@@ -168,7 +167,7 @@ export default function Home() {
       >
 
         {/* INTRODUÇÂO */}
-        <motion.section ref={sectionHome}  className="flex flex-col gap-10 min-min-h-screen py-20" id='introducao'
+        <motion.section ref={sectionHome} className="flex flex-col gap-10 min-min-h-screen py-20" id='introducao'
         >
 
             <motion.div 
@@ -458,7 +457,7 @@ export default function Home() {
 
         {/* TECNOLOGIAS */}
 
-        <section ref={sectionTecnologias} className="flex flex-col gap-10 min-h-screen file:py-20" id='tecnologias'>
+        <section ref={sectionTecnologias} className="flex flex-col gap-10 min-h-screen py-20" id='tecnologias'>
 
           <motion.div 
           initial={{ opacity: 0, y: 30 }}
