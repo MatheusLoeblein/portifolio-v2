@@ -7,7 +7,7 @@ export function  useScrollDown(){
   
     const { scrollY } = useScroll()
   
-    useMotionValueEvent(scrollY, "change", (latest) => {
+    useMotionValueEvent(scrollY, "change", (latest:Number) => {
       console.log("Page scroll: ", latest)
       console.log(scrollY);
   

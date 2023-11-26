@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import 'tailwindcss/tailwind.css';
 import type { AppProps } from 'next/app';
+import { PageContextProvider } from '@/contexts/PageContext';
 
 export default function Portifolio({ Component, pageProps }: AppProps){
     return(
@@ -10,7 +11,9 @@ export default function Portifolio({ Component, pageProps }: AppProps){
                 <title>Matheus Loeblein</title>
             </Head>
 
-            <Component {...pageProps}/>
+            <PageContextProvider>
+                <Component {...pageProps}/>
+            </PageContextProvider>
 
         </>
     )
