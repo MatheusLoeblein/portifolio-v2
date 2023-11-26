@@ -13,16 +13,15 @@ export default function Home() {
 
   return (
     <>
-    <BackgroundVideo/>
-    <main className='w-[900px] flex flex-col justify-center m-auto items-center'>
+      <BackgroundVideo/>
+    <main className='w-full px-5 md:p-0 md:w-[750px] flex flex-col justify-center m-auto items-center '>
       
       <Menu/>
       <Profile/>
 
-      <div className="flex justify-center xl:w-[1000px] m-auto xl:justify-end ">
-        <div className="md:w-full overflow-hidden xl:w-[820px] px-16 flex flex-col">
+      <div className="w-full flex justify-center xl:w-[1000px] m-auto xl:justify-end ">
+        <div className="w-full overflow-hidden xl:w-[820px] flex flex-col">
 
-          <h1 className='text-white p-28 text-5xl'>MATHEUS EDUARDO LOEBLEIN</h1>
           <Intro/>
           <About/>
           <Experience/>

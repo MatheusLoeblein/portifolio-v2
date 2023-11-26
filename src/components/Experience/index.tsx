@@ -26,7 +26,7 @@ export function Experience(){
         initial={{ opacity: 0, y: 40 }}
         whileInView={{opacity: 1, y: 0}}
         transition={{ duration: 0.7 }}
-        className="flex gap-3 text-white text-5xl ">
+        className="flex gap-3 text-white flex-col sm:flex-row text-4xl md:text-5xl ">
           <span>FORMAÇÕES &</span>
           <span className="text-[#319791]">EXPERIENCIAS</span>
         </motion.h1>
@@ -43,21 +43,21 @@ export function Experience(){
             <span className='w-3 h-3 bg-gray-400 rounded-full absolute -left-[7px] top-0 group-hover:bg-primary transition-colors duration-500'></span>
 
             <div className='flex flex-col px-10 space-y-10 -mt-1'>
-              <span className='text-lg text-gray-400 group-hover:text-primary transition-colors duration-500 font-medium'>2022 - Presente</span>
+              <span className='text-sm sm:text-lg text-gray-400 group-hover:text-primary transition-colors duration-500 font-medium'>2022 - Presente</span>
 
               <div className='flex flex-col gap-1'>
-                <span className='text-2xl text-white'>Analise e Desenvolvimento de Sistemas</span>
-                <span className='text-sm text-gray-400'>Faculdade Anhanguera</span>
+                <span className='text-xl sm:text-2xl text-white'>Analise e Desenvolvimento de Sistemas</span>
+                <span className='text-xs sm:text-sm text-gray-400'>Faculdade Anhanguera</span>
               </div>
 
               <div className='flex flex-col gap-1'>
-                <span className='text-2xl text-white'>Python 3( PySide6, Django, Selenium, Regexp, Testes, TDD, POO, Design Patterns GoF)</span>
-                <span className='text-sm text-gray-400'>Udemy</span>
+                <span className='text-xl sm:text-2xl text-white'>Python 3( PySide6, Django, Selenium, Regexp, Testes, TDD, POO, Design Patterns GoF)</span>
+                <span className='text-xs sm:text-sm text-gray-400'>Udemy</span>
               </div>
 
               <div className='flex flex-col gap-1'>
-                <span className='text-2xl text-white'>Assistente de TI</span>
-                <span className='text-sm text-gray-400'>Formedica Farmacia de Manipulação</span>
+                <span className='text-xl sm:text-2xl text-white'>Assistente de TI</span>
+                <span className='text-xs sm:text-sm text-gray-400'>Formedica Farmacia de Manipulação</span>
               </div>
               
             </div>
@@ -73,11 +73,11 @@ export function Experience(){
           <span className='w-3 h-3 bg-gray-400 rounded-full absolute -left-[7px] top-0 group-hover:bg-primary transition-colors duration-500'></span>
 
             <div className='flex flex-col px-10 space-y-10 -mt-1'>
-              <span className='text-lg text-gray-400 group-hover:text-primary transition-colors duration-500 font-medium'>2019 - 2022</span>
+              <span className='text-sm sm:text-lg text-gray-400 group-hover:text-primary transition-colors duration-500 font-medium'>2019 - 2022</span>
 
               <div className='flex flex-col gap-1'>
-                <span className='text-2xl text-white'>Monitor de Operações</span>
-                <span className='text-sm text-gray-400'>Spacecom Monitoramento</span>
+                <span className='text-xl sm:text-2xl text-white'>Monitor de Operações</span>
+                <span className='text-xs sm:text-sm text-gray-400'>Spacecom Monitoramento</span>
               </div>
 
             </div>

@@ -16,7 +16,7 @@ export function Menu(){
         <motion.nav 
         initial={{opacity: 0}}
         animate={{opacity: 1}}
-        className='hidden xl:flex fixed right-10 text-gray-300 text-xl border border-gray-500 py-9 px-4 flex-col gap-8 top-1/2 -translate-y-1/2 rounded-full'>
+        className='hidden z-10 xl:flex fixed right-10 bg-black text-gray-300 text-xl border border-gray-500 py-9 px-4 flex-col gap-8 top-1/2 -translate-y-1/2 rounded-full'>
             <div>
                 <a href="#introducao" className={`hover:text-[#319791] transition-colors ${currentSectionId === "introducao" && 'text-[#319791]'}`} onClick={handleScroll}><AiOutlineHome/></a>
             </div>

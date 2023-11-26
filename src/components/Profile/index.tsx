@@ -6,12 +6,12 @@ export function Profile(){
         <motion.div 
         initial={{opacity: 0}}
         animate={{opacity: 1}}
-        className="w-full flex border max-w-[775px] border-gray-500 rounded-2xl p-10 text-white mt-5 xl:mt-0 xl:ml-[20px] xl:w-[400px] xl:fixed xl:top-1/2 xl:-translate-y-1/2 xl:left-0" >
+        className="w-full flex border md:max-w-[765px] border-gray-500 rounded-2xl p-10 text-white mt-5 xl:mt-0 xl:ml-[20px] xl:w-[400px] xl:fixed xl:top-1/2 xl:-translate-y-1/2 xl:left-0" >
   
           <div className="flex flex-col items-center justify-center w-full gap-5 xl:gap-10">
             <div className="flex justify-between w-full items-center">
               <div className="flex gap-2 text-sm">
-                <Image 
+                <Image  
                 className="w-12"
                 src="/assets/Logo.png" 
                 alt="myLogo" 

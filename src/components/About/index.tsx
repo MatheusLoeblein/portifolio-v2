@@ -29,18 +29,18 @@ export function About(){
         initial={{ opacity: 0, y: 40 }}
         whileInView={{opacity: 1, y: 0}}
         transition={{ duration: 0.7 }}
-        className="flex gap-[12px] text-white text-5xl ">
-          <span>UM POUCO SOBRE O</span>
-          <span className="text-[#319791]">QUE FAÇO</span>
+        className="flex flex-col sm:flex-row text-4xl md:text-5xl gap-[12px] text-white  ">
+          <span>UM POUCO SOBRE </span>
+          <span className="text-[#319791]">O QUE FAÇO</span>
         </motion.h1>
 
 
-        <div className='text-gray-400 text-md '>
+        <div className='text-gray-400 text-sm sm:text-md '>
           <motion.p  
           initial={{ opacity: 0, y: 40 }}
           whileInView={{opacity: 1, y: 0}}
           transition={{ duration: 0.9 }}
-          className="w-[500px]">
+          className="w-full">
             Apaixonado por criar soluções poderosas que transformam dados em resultados. 
             Com experiência em diversas tecnologias e linguagens de programação, estou 
             sempre em busca de novos desafios que me permitam expandir minhas habilidades 
@@ -51,7 +51,7 @@ export function About(){
           initial={{ opacity: 0, y: 40 }}
           whileInView={{opacity: 1, y: 0}}
           transition={{ duration: 1.1 }}
-          className='pl-5 py-5 '>
+          className='pl-5 py-5 text-sm sm:text-md'>
             <li className=' list-disc'>Desenvolvimento de aplicativos web completos, desde a concepção até a implantação.</li>
             <li className=' list-disc'>Criação de interfaces de usuário atraentes e intuitivas usando frameworks e bibliotecas front-end, como React.</li>
             <li className=' list-disc'>Integração de bancos de dados relacionais e não relacionais para armazenamento e recuperação de dados.</li>
@@ -64,6 +64,7 @@ export function About(){
           initial={{ opacity: 0, y: 40 }}
           whileInView={{opacity: 1, y: 0}}
           transition={{ duration: 1.3 }}
+          className="text-sm sm:text-md"
           >
             Ao explorar meu portfólio, você encontrará links para os condigos fontes, bem estruturados e de fácil manutenção. 
             Além disso, demonstro habilidades de resolução de problemas, capacidade de aprendizado rápido e uma mentalidade focada 

@@ -29,7 +29,7 @@ export function Protifolio(){
         initial={{ opacity: 0, y: 50}}
         whileInView={{opacity: 1, y: 0}}
         transition={{ duration: 0.7 }}
-        className="flex gap-3 text-white text-5xl ">
+        className="flex flex-col sm:flex-row gap-3 text-white text-4xl sm:text-5xl ">
           <span>PROJETOS </span>
           <span className="text-[#319791]">EM DESTAQUE</span>
         </motion.h1>
@@ -47,7 +47,7 @@ export function Protifolio(){
           initial={{ opacity: 0}}
           whileInView={{opacity: 1}}
           transition={{ duration: 1.2 }}
-          className='text-2xl mt-5'>LANDING PAGE - SIMPOSIO OBESIDADE MULTIFATORIAL</motion.h3>
+          className='text-xl sm:text-2xl mt-5'>LANDING PAGE - SIMPOSIO OBESIDADE MULTIFATORIAL</motion.h3>
 
         </motion.div>
 
@@ -64,7 +64,7 @@ export function Protifolio(){
           initial={{ opacity: 0}}
           whileInView={{opacity: 1}}
           transition={{ duration: 1.2 }}
-          className='text-2xl mt-5'>LANDING PAGE - SIMPOSIO OBESIDADE MULTIFATORIAL</motion.h3>
+          className='text-xl sm:text-2xl mt-5'>LANDING PAGE - SIMPOSIO OBESIDADE MULTIFATORIAL</motion.h3>
 
         </motion.div>
 

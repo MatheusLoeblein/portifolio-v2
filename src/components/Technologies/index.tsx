@@ -32,13 +32,13 @@ export function Tecnologies(){
         initial={{ opacity: 0, y: 30 }}
         whileInView={{opacity: 1, y: 0}}
         transition={{ duration: .7 }}
-        className="flex gap-3 text-white text-5xl ">
+        className="flex flex-col sm:flex-row gap-3 text-white text-4xl md:text-5xl ">
           <span>PRINCIPAIS</span>
           <span className="text-[#319791]">TECNOLOGIAS</span>
         </motion.h1>
 
 
-        <div className='grid grid-cols-4 gap-12 text-white'>
+        <div className='grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-12 text-white'>
 
           <motion.div 
           initial={{ opacity: 0, y: -30, x: -100}}
