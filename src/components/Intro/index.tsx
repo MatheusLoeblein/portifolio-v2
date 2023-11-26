@@ -4,6 +4,8 @@ import { AiOutlineHome } from "react-icons/ai";
 import { VscArrowDown } from "react-icons/vsc";
 import { useNavigationFromSection } from "@/hooks/useNavigateFromSection";
 import { useSectionObserver } from "@/hooks/useSectionObsever";
+import Image from 'next/image'
+
 
 export function Intro(){
 
@@ -63,7 +65,7 @@ export function Intro(){
               onClick={handleScroll}
               className='flex relative rounded-full border border-gray-500 w-48 h-48 p-2 cursor-pointer'>
 
-                <img src="assets/meus_projetos.svg" className='animate-spin-low ' alt="" />  
+                <Image src="assets/meus_projetos.svg" className='animate-spin-low ' alt="Projects link" width={500} height={500} />  
 
                 <span className='text-white absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2'>
                  <VscArrowDown size={40}/>
@@ -78,7 +80,7 @@ export function Intro(){
                 <motion.div className='flex flex-col gap-2'
                 initial={{opacity: 0, x: -50}}
                 whileInView={{opacity: 1, x: 0}}
-                transition={{duration: .4, duration: 1.2}}
+                transition={{duration: 1.2}}
                 >
                   <span className='text-6xl font-medium text-primary'>2+ </span>
                   <span className='text-md font-thin text-white'>Anos de Experiência</span>
@@ -86,7 +88,7 @@ export function Intro(){
                 <motion.div 
                   initial={{opacity: 0, x: 50}}
                   whileInView={{opacity: 1, x: 0}}
-                  transition={{duration: .4, duration: 1.2}}
+                  transition={{duration: 1.2}}
                   className='flex flex-col gap-2'>
                   <span className='text-6xl font-medium text-primary'>10+</span>
                   <span className='text-md font-thin text-white'>Tecnologias</span>

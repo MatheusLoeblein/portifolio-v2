@@ -1,6 +1,6 @@
 import { motion } from "framer-motion";
 import { AiFillGithub, AiFillInstagram, AiFillLinkedin } from "react-icons/ai";
-
+import Image from "next/image";
 export function Profile(){
     return(
         <motion.div 
@@ -11,10 +11,13 @@ export function Profile(){
           <div className="flex flex-col items-center justify-center w-full gap-5 xl:gap-10">
             <div className="flex justify-between w-full items-center">
               <div className="flex gap-2 text-sm">
-                <img 
+                <Image 
                 className="w-12"
                 src="/assets/Logo.png" 
-                alt="myLogo" />
+                alt="myLogo" 
+                width={500}
+                height={500}
+                />
               </div>
   
               <h2 className="flex flex-col text-md">
@@ -23,10 +26,13 @@ export function Profile(){
               </h2>
             </div>
   
-            <img 
+              <Image 
                 className="rounded-2xl w-96"
                 src="/assets/profile2.png" 
-                alt="profileimg" />
+                alt="profileimg"
+                width={500}
+                height={500}
+                />
   
             <div className="flex flex-col justify-center items-center text-lg">
               <span>Matheus Loeblein</span>
