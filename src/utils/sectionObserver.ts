@@ -11,6 +11,7 @@ export const observeSection = ({targetElement, callback}:ObserverProps) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             callback(entry.target.id);
+            console.log(entry.target.id, "%%%%")
           }
         });
       },

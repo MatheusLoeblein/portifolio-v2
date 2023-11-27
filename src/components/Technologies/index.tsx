@@ -9,7 +9,7 @@ import { useRef } from "react";
 
 export function Tecnologies(){
 
-    const sectionTecnologies= useRef(null);
+    const sectionTecnologies = useRef(null);
     useSectionObserver(sectionTecnologies)
     
     return(
