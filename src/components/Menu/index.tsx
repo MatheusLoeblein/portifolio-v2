@@ -4,10 +4,11 @@ import { BsColumnsGap,  BsBoxes } from 'react-icons/bs'
 import { BiServer } from 'react-icons/bi'
 import { PiSuitcaseSimpleBold } from 'react-icons/pi'
 import { useNavigationFromSection } from '@/hooks/useNavigateFromSection';
-import { useContext, useState } from 'react';
+import React, { useContext, useState } from 'react';
 import { PageContext, PageContextProps } from '@/contexts/PageContext';
 import { MdMenuOpen } from "react-icons/md";
 import { IoClose } from "react-icons/io5"
+
 
 export function Menu(){
 
@@ -16,10 +17,9 @@ export function Menu(){
     const { handleScroll } = useNavigationFromSection();
     const { currentSectionId } = useContext(PageContext) as PageContextProps;
 
-    function handleClickInMenuMobile(e){
-        handleScroll(e)
-        setOpen(false)
-
+    function handleClickInMenuMobile(e:React.MouseEvent<HTMLAnchorElement, MouseEvent>){
+        handleScroll(e);
+        setOpen(false);
     }
 
     return(
