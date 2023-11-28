@@ -2,6 +2,7 @@ import Head from 'next/head';
 import 'tailwindcss/tailwind.css';
 import type { AppProps } from 'next/app';
 import { PageContextProvider } from '@/contexts/PageContext';
+import { ProjectGallery } from "@/components/ProjectGallery";
 
 export default function Portifolio({ Component, pageProps }: AppProps){
     return(
@@ -13,6 +14,7 @@ export default function Portifolio({ Component, pageProps }: AppProps){
 
             <PageContextProvider>
                 <Component {...pageProps}/>
+                <ProjectGallery/>
             </PageContextProvider>
 
         </>

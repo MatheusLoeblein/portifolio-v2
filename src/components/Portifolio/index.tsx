@@ -4,7 +4,6 @@ import Image from 'next/image'
 import { useSectionObserver } from "@/hooks/useSectionObsever";
 import { useRef } from "react";
 
-
 export function Protifolio(){
 
     const sectionPortifolio = useRef(null);
@@ -39,7 +38,7 @@ export function Protifolio(){
         whileInView={{opacity: 1, y: 0}}
         transition={{ duration: 0.9 }}
         className='text-white'>
-          <div className='-ml-1 overflow-hidden rounded-lg'>
+          <div className='-ml-1 overflow-hidden rounded-lg' >
             <Image src='assets/simposio/Group 1.svg' alt='teste' width={2000} height={2000} className='object-cover hover:scale-110 hover:rotate-2 transition-all duration-500 cursor-pointer'/>
           </div>
 
@@ -59,6 +58,8 @@ export function Protifolio(){
           <div className='-ml-1 overflow-hidden rounded-lg'>
             <Image src='assets/simposio/Group 1.svg' alt='teste' width={2000} height={2000} className='object-cover hover:scale-110 hover:rotate-2 transition-all duration-500 cursor-pointer'/>
           </div>
+
+          
 
          <motion.h3 
           initial={{ opacity: 0}}
