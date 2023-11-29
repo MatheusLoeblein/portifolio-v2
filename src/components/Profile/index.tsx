@@ -44,16 +44,18 @@ export function Profile(){
             </div>
   
             <div className="flex gap-4 text-gray-400">
-              <span className="flex justify-center items-center w-12 h-12 rounded-full p-1 border-2 border-gray-500 hover:text-[#319791] hover:border-[#319791] cursor-pointer transition-colors duration-300">
+              <a 
+              href="https://github.com/MatheusLoeblein"
+              target="_blank"
+              className="flex justify-center items-center w-12 h-12 rounded-full p-1 border-2 border-gray-500 hover:text-[#319791] hover:border-[#319791] cursor-pointer transition-colors duration-300">
                 <AiFillGithub size={20}/>
-              </span>
-              <span
+              </a>
+              <a
+              href="https://www.linkedin.com/in/matheus-loeblein-761a73104/"
+              target="_blank"
               className="flex justify-center items-center w-12 h-12 rounded-full p-1 border-2 border-gray-500 hover:text-[#319791] hover:border-[#319791] cursor-pointer transition-colors duration-300">
                 <AiFillLinkedin size={20}/>
-              </span>
-              <span className="flex justify-center items-center w-12 h-12 rounded-full p-1 border-2 border-gray-500 hover:text-[#319791] hover:border-[#319791] cursor-pointer transition-colors duration-300">
-                <AiFillInstagram size={20}/>
-              </span>
+              </a>
             </div>
   
             <button className="bg-[#319791] w-full p-4 rounded-full hover:bg-transparent border-[#319791] border-2 hover:text-[#319791] cursor-pointer transition-colors duration-300">

@@ -54,6 +54,14 @@ export function Experience(){
                 <span className='text-xl sm:text-2xl text-white'>Python 3( PySide6, Django, Selenium, Regexp, Testes, TDD, POO, Design Patterns GoF)</span>
                 <span className='text-xs sm:text-sm text-gray-400'>Udemy</span>
               </div>
+              <div className='flex flex-col gap-1'>
+                <span className='text-xl sm:text-2xl text-white'>
+                  ReactJS, NextJS, Styled-Components, testes com Jest e 
+                  Testing Library, Storybook, Server-Side Rendering, 
+                  (SSR, SSG, ISR, CSR, SPA, PWA)
+                </span>
+                <span className='text-xs sm:text-sm text-gray-400'>Udemy</span>
+              </div>
 
               <div className='flex flex-col gap-1'>
                 <span className='text-xl sm:text-2xl text-white'>Assistente de TI</span>
