@@ -25,7 +25,6 @@ export function Profile(){
                 <span>Software Enginner</span>
               </h2>
             </div>
-  
               <Image 
                 className="rounded-2xl w-96"
                 src="/assets/profile2.png" 
@@ -58,9 +57,12 @@ export function Profile(){
               </a>
             </div>
   
-            <button className="bg-[#319791] w-full p-4 rounded-full hover:bg-transparent border-[#319791] border-2 hover:text-[#319791] cursor-pointer transition-colors duration-300">
-                CONTATE-ME
-            </button>
+            <a 
+            href="https://api.whatsapp.com/send?phone=5541995515225"
+            target="_blank"
+            className="bg-[#319791] w-full flex items-center justify-center p-4 rounded-full hover:bg-transparent border-[#319791] border-2 hover:text-[#319791] cursor-pointer transition-colors duration-300">
+                <span>CONTATE-ME</span>
+            </a>
           </div>
         </motion.div>
     )

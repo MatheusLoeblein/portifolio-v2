@@ -69,7 +69,7 @@ export function ProjectGallery({images, setImages}){
                                     animate={{opacity:1, x: 0, scale: 1}}
                                     transition={{type: "spring", stiffness: 400, damping: 30}}
                                     key={imageIndex}
-                                    className="w-full h-full"
+                                    className="w-full h-full relative"
                                 >
                                     <Image
                                     src={images[imageIndex]}
@@ -78,6 +78,7 @@ export function ProjectGallery({images, setImages}){
                                     width={1000}
                                     height={1000}
                                     />
+                                
                                 </motion.div>
                                 }
 
