@@ -2,15 +2,21 @@ import { motion } from "framer-motion";
 import { BsBoxes } from "react-icons/bs";
 import Image from 'next/image'
 import { useSectionObserver } from "@/hooks/useSectionObsever";
-import { useRef } from "react";
+import { useRef, useState } from "react";
+import { ProjectGallery } from "../ProjectGallery";
+import { simposioImages } from "./images";
 
 export function Protifolio(){
 
     const sectionPortifolio = useRef(null);
     useSectionObserver(sectionPortifolio)
+
+    const [images, setImages] = useState([]);
     
     return(
         <section ref={sectionPortifolio} className="flex flex-col gap-10 min-h-screen py-20" id='portifolio'>
+
+          <ProjectGallery images={images} setImages={setImages}/>
 
         <motion.div 
         initial={{ opacity: 0, y: 30}}
@@ -38,7 +44,7 @@ export function Protifolio(){
         whileInView={{opacity: 1, y: 0}}
         transition={{ duration: 0.9 }}
         className='text-white'>
-          <div className='-ml-1 overflow-hidden rounded-lg' >
+          <div className='-ml-1 overflow-hidden rounded-lg' onClick={() => setImages(simposioImages)}>
             <Image src='assets/simposio/Group 1.svg' alt='teste' width={2000} height={2000} className='object-cover hover:scale-110 hover:rotate-2 transition-all duration-500 cursor-pointer'/>
           </div>
 
