@@ -9,4 +9,6 @@ services:
     build: ./nginx
     ports:
       - 80:80
+    volumes:
+      - /etc/letsencrypt/:/etc/letsencrypt/
     restart: always

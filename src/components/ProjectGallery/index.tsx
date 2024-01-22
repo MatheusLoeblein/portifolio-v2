@@ -1,17 +1,17 @@
 import { motion, AnimatePresence } from "framer-motion"
 import Image from 'next/image'
-import { useEffect, useState } from "react"
+import { useEffect, useState, Dispatch, SetStateAction } from "react"
 import { IoClose } from "react-icons/io5"
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
 
 interface images {
-    images: Array[];
-    setImages: () => void;
+    images: string[];
+    setImages: Dispatch<SetStateAction<any>>;
 
 }
 
-export function ProjectGallery({images, setImages}){
+export function ProjectGallery({images, setImages}:images){
 
     const [open, setOpen] = useState(false)
     const [imageIndex, setImageIndex] = useState(0)

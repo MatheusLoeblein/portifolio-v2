@@ -4,19 +4,25 @@ import Image from 'next/image'
 import { useSectionObserver } from "@/hooks/useSectionObsever";
 import { useRef, useState } from "react";
 import { ProjectGallery } from "../ProjectGallery";
-import { simposioImages } from "./images";
+import { simposioImages, helpdeskImages, ImageArray } from "./images";
+
+
 
 export function Protifolio(){
 
     const sectionPortifolio = useRef(null);
     useSectionObserver(sectionPortifolio)
 
-    const [images, setImages] = useState([]);
+    const [images, setImages] = useState<ImageArray>();
     
     return(
         <section ref={sectionPortifolio} className="flex flex-col gap-10 min-h-screen py-20" id='portifolio'>
 
-          <ProjectGallery images={images} setImages={setImages}/>
+
+          {
+            images &&
+            <ProjectGallery images={images} setImages={setImages}/>
+          }
 
         <motion.div 
         initial={{ opacity: 0, y: 30}}
@@ -59,6 +65,33 @@ export function Protifolio(){
           whileInView={{opacity: 1}}
           transition={{ duration: 1.2 }}
           className='text-xl sm:text-2xl mt-5 group-hover:underline transition-all'>LANDING PAGE - SIMPOSIO OBESIDADE MULTIFATORIAL</motion.h3>
+        </motion.div> 
+
+        <motion.div 
+        initial={{ opacity: 0, y: 70}}
+        whileInView={{opacity: 1, y: 0}}
+        transition={{ duration: 0.9 }}
+        className='text-white group cursor-pointer'
+
+        
+        onClick={() => setImages(helpdeskImages)}
+        >
+          <div className='-ml-1 overflow-hidden rounded-lg relative' 
+          >
+            <Image src='assets/helpdesk/card.svg' alt='teste' width={2000} height={2000} className='object-cover hover:scale-110 hover:rotate-2 transition-all duration-500 cursor-pointer'/>
+            <div className="absolute bottom-3 left-3 flex gap-3 font-medium text-sm group cursor-pointer">
+              <span className="bg-white text-gray-700 group-hover:text-white group-hover:bg-black px-4 py-2 rounded-full transition-all">React</span>
+              <span className="bg-white text-gray-700 group-hover:text-white group-hover:bg-black px-4 py-2 rounded-full transition-all" >Tailwind</span>
+              <span className="bg-white text-gray-700 group-hover:text-white group-hover:bg-black px-4 py-2 rounded-full transition-all" >Django Rest</span>
+              <span className="bg-white text-gray-700 group-hover:text-white group-hover:bg-black px-4 py-2 rounded-full transition-all" >Docker</span>
+            </div>
+          </div>
+
+        <motion.h3
+          initial={{ opacity: 0}}
+          whileInView={{opacity: 1}}
+          transition={{ duration: 1.2 }}
+          className='text-xl sm:text-2xl mt-5 group-hover:underline transition-all'>HELPDESK - SUPORTE E UTILITARIOS FORMÉDICA</motion.h3>
         </motion.div>  
 
       </section>

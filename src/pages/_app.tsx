@@ -16,7 +16,6 @@ export default function Portifolio({ Component, pageProps }: AppProps){
 
             <PageContextProvider>
                 <Component {...pageProps}/>
-                <ProjectGallery/>
             </PageContextProvider>
 
         </>
