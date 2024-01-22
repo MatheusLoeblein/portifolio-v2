@@ -10,5 +10,6 @@ services:
     ports:
       - 80:80
     volumes:
-      - ~/etc/letsencrypt/:/etc/letsencrypt/
+      - /etc/letsencrypt/:/etc/letsencrypt/
+      - /etc/ssl/certs/dhparam.pem:/etc/ssl/certs/dhparam.pem
     restart: always
