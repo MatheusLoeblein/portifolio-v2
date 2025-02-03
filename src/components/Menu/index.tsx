@@ -73,7 +73,7 @@ export function Menu(){
                     initial={{opacity: 0}}
                     animate={{opacity: 1}}
                     exit={{opacity: 0}}
-                    className='w-full flex z-10 justify-end fixed bg-[#00000080] backdrop-blur-[1px] right-0 top-0 bottom-0 text-gray-300 text-md'>
+                    className='w-full flex z-10 justify-end fixed bg-[#00000080] backdrop-blur-[1px] right-0 top-0 bottom-0 text-gray-300 text-base'>
 
                     <motion.div 
                         initial={{x: 300}}

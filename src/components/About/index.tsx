@@ -10,7 +10,7 @@ export function About(){
 
 
     return(
-        <motion.section ref={sectionSobre} className="flex flex-col gap-10 min-h-screen py-20" id='sobre'>
+        <motion.section ref={sectionSobre} className="flex flex-col gap-10 min-h-screen py-20 md:px-10" id='sobre'>
 
         <motion.div 
         initial={{ opacity: 0, y: 40 }}
@@ -35,7 +35,7 @@ export function About(){
         </motion.h1>
 
 
-        <div className='text-gray-400 text-sm sm:text-md '>
+        <div className='text-gray-400 text-sm sm:text-base '>
           <motion.p  
           initial={{ opacity: 0, y: 40 }}
           whileInView={{opacity: 1, y: 0}}
@@ -51,7 +51,7 @@ export function About(){
           initial={{ opacity: 0, y: 40 }}
           whileInView={{opacity: 1, y: 0}}
           transition={{ duration: 1.1 }}
-          className='pl-5 py-5 text-sm sm:text-md'>
+          className='pl-5 py-5 text-sm sm:text-base'>
             <li className=' list-disc'>Desenvolvimento de aplicativos web completos, desde a concepção até a implantação.</li>
             <li className=' list-disc'>Criação de interfaces de usuário atraentes e intuitivas usando frameworks e bibliotecas front-end, como React.</li>
             <li className=' list-disc'>Integração de bancos de dados relacionais e não relacionais para armazenamento e recuperação de dados.</li>
@@ -64,7 +64,7 @@ export function About(){
           initial={{ opacity: 0, y: 40 }}
           whileInView={{opacity: 1, y: 0}}
           transition={{ duration: 1.3 }}
-          className="text-sm sm:text-md"
+          className="text-sm sm:text-base"
           >
             Ao explorar meu portfólio, você encontrará links para os condigos fontes, bem estruturados e de fácil manutenção. 
             Além disso, demonstro habilidades de resolução de problemas, capacidade de aprendizado rápido e uma mentalidade focada 

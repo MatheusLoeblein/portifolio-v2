@@ -26,6 +26,10 @@ const config: Config = {
     
       animation:{
         'spin-low': 'spin-low 7s linear infinite'
+      },
+
+      screens: {
+        'md/lg': '860px'
       }
     },
   },

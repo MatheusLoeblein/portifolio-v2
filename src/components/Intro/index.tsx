@@ -16,7 +16,7 @@ export function Intro(){
     useSectionObserver(sectionHome)
 
      return(
-        <motion.section ref={sectionHome} className="flex flex-col gap-10 min-h-screen py-20" id='introducao'
+        <motion.section ref={sectionHome} className="flex flex-col gap-10 min-h-screen py-20 md:px-10" id='introducao'
         >
 
             <motion.div 
@@ -35,7 +35,7 @@ export function Intro(){
               initial={{opacity: 0, y: 50}}
               whileInView={{opacity: 1, y: 0}}
               transition={{duration: .7}}
-              className="flex text-4xl   sm:text-5xl flex-col text-white md:text-6xl">
+              className="flex text-5xl  sm:text-6xl flex-col text-white md:text-7xl ">
               <span>OLÁ, ME CHAMO</span>
               <span className="text-[#319791]">MATHEUS LOEBLEIN,</span>
               <span>DESENVOLVEDOR <br /> FULL-STACK</span>
@@ -46,15 +46,15 @@ export function Intro(){
               initial={{opacity: 0, y: 70}}
               whileInView={{opacity: 1, y: 0}}
               transition={{duration: 1}}
-              className="text-gray-400 text-sm w-full md:text-md md:w-[400px] xl:w-[500px] ">
-            Apaixonado por criar soluções poderosas que transformam dados em resultados. 
-            Com experiência em diversas tecnologias e linguagens de programação, estou 
-            sempre em busca de novos desafios que me permitam expandir minhas habilidades 
-            e conhecimentos.
+              className="text-gray-400 w-full text-base xl:w-[35rem]">
+                Apaixonado por criar soluções poderosas que transformam dados em resultados. 
+                Com experiência em diversas tecnologias e linguagens de programação, estou 
+                sempre em busca de novos desafios que me permitam expandir minhas habilidades 
+                e conhecimentos.
             </motion.p>
 
 
-            <motion.div className='flex  sm:justify-end px-18'
+            <motion.div className='flex sm:justify-end px-18 sm:-mt-5'
               initial={{opacity: 0, y: 90}}
               whileInView={{opacity: 1, y: 0}}
               transition={{duration: 1.2}}
@@ -76,22 +76,22 @@ export function Intro(){
             </motion.div>
 
 
-            <div className='flex gap-14'>
+            <div className='flex gap-14 sm:-mt-10'>
                 <motion.div className='flex flex-col gap-2'
                 initial={{opacity: 0, x: -50}}
                 whileInView={{opacity: 1, x: 0}}
                 transition={{duration: 1.2}}
                 >
-                  <span className='text-4xl sm:text-5xl md:text-6xl font-medium text-primary'>2+ </span>
-                  <span className='text-md font-thin text-white'>Anos de Experiência</span>
+                  <span className='text-5xl sm:text-6xl md:text-7xl font-medium text-primary'>2+ </span>
+                  <span className='text-base font-thin text-gray-400 uppercase'>Anos de Experiência</span>
                 </motion.div>
                 <motion.div 
                   initial={{opacity: 0, x: 50}}
                   whileInView={{opacity: 1, x: 0}}
                   transition={{duration: 1.2}}
                   className='flex flex-col gap-2'>
-                  <span className='text-4xl sm:text-5xl md:text-6xl font-medium text-primary'>10+</span>
-                  <span className='text-md font-thin text-white'>Tecnologias</span>
+                  <span className='text-5xl sm:text-6xl md:text-7xl font-medium text-primary'>10+</span>
+                  <span className='text-base font-thin text-gray-400 uppercase'>Tecnologias</span>
                 </motion.div>
             </div>
 

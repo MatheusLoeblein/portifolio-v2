@@ -6,28 +6,28 @@ export function Profile(){
         <motion.div 
         initial={{opacity: 0}}
         animate={{opacity: 1}}
-        className="w-full flex border md:max-w-[765px] border-gray-500 rounded-2xl p-10 text-white mt-5 xl:mt-0 xl:ml-[20px] xl:w-[400px] xl:fixed xl:top-1/2 xl:-translate-y-1/2 xl:left-0" >
+        className="w-full flex border md:max-w-[770px] border-gray-500 rounded-[3rem] p-10 text-white mt-5 xl:mt-0 xl:ml-[20px] xl:w-[380px] min[1600px]:w-[500px] xl:fixed xl:top-1/2 xl:-translate-y-1/2 xl:left-0 backdrop-blur-sm" >
   
           <div className="flex flex-col items-center justify-center w-full gap-5 xl:gap-10">
             <div className="flex justify-between w-full items-center">
               <div className="flex gap-2 text-sm">
                 <Image  
                 className="w-12"
-                src="/assets/Logo.png" 
+                src="/assets/logo.svg" 
                 alt="myLogo" 
                 width={500}
                 height={500}
                 />
               </div>
   
-              <h2 className="flex flex-col text-md">
+              <h2 className="flex flex-col text-base">
                 <span>Full Stack Developer</span>
                 <span>Software Enginner</span>
               </h2>
             </div>
               <Image 
-                className="rounded-2xl w-96"
-                src="/assets/profile2.png" 
+                className="rounded-[3rem] w-96 md:w-72 xl:w-96"
+                src="/assets/profile.png" 
                 alt="profileimg"
                 width={500}
                 height={500}

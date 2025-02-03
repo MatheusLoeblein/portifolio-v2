@@ -16,7 +16,7 @@ export function Protifolio(){
     const [images, setImages] = useState<ImageArray>();
     
     return(
-        <section ref={sectionPortifolio} className="flex flex-col gap-10 min-h-screen py-20" id='portifolio'>
+        <section ref={sectionPortifolio} className="flex flex-col gap-10 min-h-screen py-20 md:px-10" id='portifolio'>
 
 
           {

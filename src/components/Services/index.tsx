@@ -9,7 +9,7 @@ export function Services(){
     useSectionObserver(sectionServices)
 
     return(
-        <motion.section ref={sectionServices} className="flex flex-col gap-10 min-h-screen py-20" id='servicos'>
+        <motion.section ref={sectionServices} className="flex flex-col gap-10 min-h-screen py-20 md:px-10" id='servicos'>
 
         <motion.div 
         initial={{ opacity: 0, y: 40}}
@@ -39,9 +39,9 @@ export function Services(){
           initial={{ opacity: 0, y: 80}}
           whileInView={{opacity: 1, y:0}}
           transition={{ duration: 1.2 }}
-          className='p-7 flex flex-col gap-3 border border-gray-500 rounded-xl text-md text-gray-400'>
+          className='p-7 flex flex-col gap-3 border border-gray-500 rounded-xl text-base text-gray-400'>
             <h2 className='text-2xl sm:text-3xl text-[#319791]'>Back-End</h2>
-            <p className="text-sm sm:text-md">
+            <p className="text-sm sm:text-base">
               Como desenvolvedor de back end, eu construo a espinha dorsal dos sistemas, 
               potencializada por APIs sólidas. Isso significa gerenciar dados, garantir 
               segurança, otimizar desempenho e criar integrações poderosas.
@@ -52,9 +52,9 @@ export function Services(){
           initial={{ opacity: 0, y: 80}}
           whileInView={{opacity: 1, y:0}}
           transition={{ duration: 1.4 }}
-          className='p-7 flex flex-col gap-3 border border-gray-500 rounded-xl text-md text-gray-400'>
+          className='p-7 flex flex-col gap-3 border border-gray-500 rounded-xl text-base text-gray-400'>
             <h2 className='text-2xl sm:text-3xl text-[#319791]'>Front-End</h2>
-            <p className="text-sm sm:text-md">
+            <p className="text-sm sm:text-base">
               No front end, aproveito essas APIs para criar experiências envolventes para os usuários. 
               Isso significa interfaces intuitivas e dinâmicas, alimentadas por dados de back end por 
               meio de APIs bem projetadas.

@@ -13,7 +13,7 @@ export function Tecnologies(){
     useSectionObserver(sectionTecnologies)
     
     return(
-        <section ref={sectionTecnologies} className="flex flex-col gap-10 min-h-screen py-20" id='tecnologias'>
+        <section ref={sectionTecnologies} className="flex flex-col gap-10 min-h-screen py-20 md:px-10" id='tecnologias'>
 
         <motion.div 
         initial={{ opacity: 0, y: 30 }}

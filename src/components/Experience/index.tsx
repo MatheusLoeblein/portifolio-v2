@@ -8,7 +8,7 @@ export function Experience(){
     useSectionObserver(sectionExperiencias)
 
     return(
-        <section  ref={sectionExperiencias} className="flex flex-col gap-10 min-h-screen py-20" id='experiencias'>
+        <section  ref={sectionExperiencias} className="flex flex-col gap-10 min-h-screen py-20 md:px-10" id='experiencias'>
 
         <motion.div 
         initial={{ opacity: 0, y: 40 }}

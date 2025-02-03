@@ -10,7 +10,7 @@ export default function Portifolio({ Component, pageProps }: AppProps){
     return(
         <>
             <Head>
-                <link rel="icon" href="assets/Logo.png" />
+                <link rel="icon" href="assets/logo.svg" />
                 <title>Matheus Loeblein</title>
             </Head>
 
