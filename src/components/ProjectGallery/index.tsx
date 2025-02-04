@@ -4,6 +4,7 @@ import { useEffect, useState, Dispatch, SetStateAction } from "react"
 import { IoClose } from "react-icons/io5"
 import { IoIosArrowDropleftCircle } from "react-icons/io";
 import { IoIosArrowDroprightCircle } from "react-icons/io";
+import { AdaptedImage } from "../AdaptedImage";
 
 interface images {
     images: string[];
@@ -69,16 +70,8 @@ export function ProjectGallery({images, setImages}:images){
                                     animate={{opacity:1, x: 0, scale: 1}}
                                     transition={{type: "spring", stiffness: 400, damping: 30}}
                                     key={imageIndex}
-                                    className="w-full h-full relative"
-                                >
-                                    <Image
-                                    src={images[imageIndex]}
-                                    alt="image"
-                                    className="w-full h-full "
-                                    width={1000}
-                                    height={1000}
-                                    />
-                                
+                                    className="w-full h-full relative">
+                                        <AdaptedImage image={images[imageIndex]}/>
                                 </motion.div>
                                 }
 

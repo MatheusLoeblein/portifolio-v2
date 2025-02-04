@@ -82,7 +82,7 @@ export function Intro(){
                 whileInView={{opacity: 1, x: 0}}
                 transition={{duration: 1.2}}
                 >
-                  <span className='text-5xl sm:text-6xl md:text-7xl font-medium text-primary'>2+ </span>
+                  <span className='text-5xl sm:text-6xl md:text-7xl font-medium text-primary'>2+</span>
                   <span className='text-base font-thin text-gray-400 uppercase'>Anos de Experiência</span>
                 </motion.div>
                 <motion.div 
