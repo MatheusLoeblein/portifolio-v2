@@ -2,21 +2,7 @@ import { useEffect, useState } from "react"
 import Image
  from "next/image"
 import { AnimatePresence, motion } from "framer-motion"
-export function AdaptedImage({ image }:{ image:string }){
-    const [ isLoading, setIsLoading ] = useState(true)
-
-    useEffect(() => {
-        if(!isLoading){
-            setIsLoading(true)
-        }
-    }, [image])
-
-    function stopLoading(){
-        const time = setInterval(() => {
-            setIsLoading(false)
-            clearInterval(time)
-        }, 700)
-    }
+export function AdaptedImage({ image, isLoading, stopLoading }:{ image:string; isLoading:boolean; stopLoading:() => void; }){
     
     return(
         <div className="relative">
